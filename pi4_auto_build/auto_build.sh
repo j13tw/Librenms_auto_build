@@ -98,8 +98,8 @@ sudo sed -i "9c \"database\":\"${dbname}\"," Librenms_auto_build/auto_build/conf
 
 #date -s "$time"
 sudo apt update
-export LC_ALL="en_US.UTF-8"
-export LC_CTYPE="en_US.UTF-8" 
+# export LC_ALL="en_US.UTF-8"
+# export LC_CTYPE="en_US.UTF-8" 
 #start ssh
 /etc/init.d/ssh start
 
@@ -116,6 +116,7 @@ sudo apt update
 sudo apt install vim curl -y
 sudo apt install influxdb influxdb-client -y
 sudo apt install apache2 composer fping git graphviz imagemagick libapache2-mod-php7.2 mariadb-client mariadb-server mtr-tiny nmap php7.2-cli php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-snmp php7.2-xml php7.2-zip python-memcache python-mysqldb rrdtool snmp snmpd whois -y
+sudo apt install python3 python3-dev python3-pip 
 
 # add librenms user
 sudo useradd librenms -d /opt/librenms -M -r
